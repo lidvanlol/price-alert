@@ -9,7 +9,7 @@ module.exports = {
         sessionSecret: 'asdassad'
     },
     frontEnd: {
-        URL: 'price-alert-app.netlify.com'
+        URL: 'https://price-alert-app-vue.herokuapp.com'
     },
     CMC: {
         APIkey: '66ed572c-bddc-4f6e-be2c-cce14983b1db'
