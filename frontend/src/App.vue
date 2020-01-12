@@ -29,9 +29,10 @@ export default {
   margin: 0 auto;
 }
  */
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 
 body, button{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+
 }
 </style>
