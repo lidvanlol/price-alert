@@ -17,7 +17,7 @@ app.use(cors({
     origin: keys.frontEnd.URL
 //origin: 'http://localhost:8080'
 }));
-
+res.setHeader("Content-Security-Policy", default-src 'none'; style-src 'self' data:; img-src 'self' data:; script-src 'self'; connect-src 'self');
 //fix deprecation warnings
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
