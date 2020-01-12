@@ -32,7 +32,7 @@ export default {
 
 
 body, button{
-  font-family: 'Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
 </style>
