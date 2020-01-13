@@ -4,7 +4,7 @@
   "description": "Price Alert App ",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "start": "serve -s dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Filip Jovkovic",
