@@ -17,7 +17,10 @@ app.use(cors({
     origin: keys.frontEnd.URL
 //origin: 'http://localhost:8080'
 }));
-res.setHeader("Content-Security-Policy", default-src 'none'; style-src 'self' data:; img-src 'self' data:; script-src 'self'; connect-src 'self');
+app.use(function(req, res, next) {
+    res.setHeader("Content-Security-Policy", "script-src 'self' https://apis.google.com"," default-src 'none'; style-src 'self' data:; img-src 'self' data:; script-src 'self'; connect-src 'self'");
+    return next();
+});
 //fix deprecation warnings
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
