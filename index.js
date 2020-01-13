@@ -46,7 +46,6 @@ app.use('/', express.static('./public'));
 app.use('/api', routes);
 
 //listen for requests
-server.connection({
-    host: (process.env.HOST || 'localhost'),
-    port: (process.env.PORT || 4000)
+app.listen(process.env.PORT || 4000, function(){
+    console.log('Listening for requests');
 });
