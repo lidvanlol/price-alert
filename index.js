@@ -7,7 +7,6 @@ const passport = require('passport');
 const cookieSession = require('cookie-session');
 
 const routes = require('./routes/api');
-const authRoutes = require('./routes/auth');
 const keys = require('./config/keys');
 
 //setup express app
