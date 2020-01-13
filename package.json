@@ -4,9 +4,11 @@
   "description": "Price Alert App ",
   "main": "index.js",
   "scripts": {
-    "start": "start",
+   "start": "node index.js",
+   "build": "ng build",
+   "heroku-postbuild": "ng build --prod"
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "ng build --prod"
+   
   },
   "author": "Filip Jovkovic",
   "license": "ISC",
@@ -23,6 +25,7 @@
     "request-promise": "^4.2.4",
     "serve-favicon": "^2.5.0",
     "serve": "^11.3.0",
+    "heroku": "^7.35.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
