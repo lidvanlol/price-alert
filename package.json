@@ -4,7 +4,9 @@
   "description": "Price Alert App ",
   "main": "index.js",
   "scripts": {
-   "start": "node index.js"
+   "start": "node index.js",
+   "build": "ng build",
+   "heroku-postbuild": "ng build --prod"
   },
   "author": "Filip Jovkovic",
   "license": "ISC",
