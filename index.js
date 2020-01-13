@@ -7,7 +7,6 @@ const passport = require('passport');
 const cookieSession = require('cookie-session');
 const routes = require('./routes/api');
 const keys = require('./config/keys');
-const serveFavicon = require('./serve-favicon');
 
 
 //setup express app
