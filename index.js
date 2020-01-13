@@ -37,16 +37,7 @@ app.use(cookieSession({
     keys: [keys.cookieSession.key]
 }))
 
-if (process.env.NODE_ENV === "production") {
 
-   app.use(express.static("public"));
-
-
-   app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname,  "public", "index.html"));
-    });
-
-  }
 
 app.use(passport.initialize());
 app.use(passport.session());
