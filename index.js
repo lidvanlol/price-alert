@@ -5,9 +5,10 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
-const routes = require('./routes/api');
-const keys = require('./config/keys');
 
+const routes = require('./routes/api');
+const authRoutes = require('./routes/auth');
+const keys = require('./config/keys');
 
 //setup express app
 const app = express();
@@ -16,7 +17,7 @@ const app = express();
 app.use(cors({
     credentials: true,
     origin: keys.frontEnd.URL
-//origin: 'http://localhost:8080'
+    //origin: 'http://localhost:8080'
 }));
 
 //fix deprecation warnings
@@ -41,7 +42,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', express.static('./public'));
-
 
 //initialize routes
 app.use('/api', routes);
