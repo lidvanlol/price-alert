@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 
 
 app.use(function(req, res, next) {
-    res.setHeader("Content-Security-Policy", default-src 'none'; style-src 'self' data:; img-src 'self' data:; script-src 'self'; connect-src 'self');
+    res.setHeader("Content-Security-Policy", "  default-src 'none'; style-src 'self' data:; img-src 'self' data:; script-src 'self'; connect-src 'self'");
     return next();
 });
 
