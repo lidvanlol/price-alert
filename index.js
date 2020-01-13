@@ -7,6 +7,8 @@ const passport = require('passport');
 const cookieSession = require('cookie-session');
 const routes = require('./routes/api');
 const keys = require('./config/keys');
+const serveFavicon = require('./serve-favicon');
+
 
 //setup express app
 const app = express();
@@ -38,7 +40,7 @@ app.use(cookieSession({
     maxAge: 1000*60*60*24,
     keys: [keys.cookieSession.key]
 }))
-app.use(favicon(__dirname + '/frontend/public/favicon.png'));
+app.use(favicon(__dirname + '/favicon.ico'));
 
 app.use(passport.initialize());
 app.use(passport.session());
