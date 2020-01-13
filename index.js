@@ -40,8 +40,9 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/', express.static('./public'));
-
+//app.use('/', express.static('./public'));
+var distDir = __dirname + "/public/";
+ app.use(express.static(distDir));
 //initialize routes
 app.use('/api', routes);
 
