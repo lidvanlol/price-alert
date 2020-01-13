@@ -19,10 +19,7 @@ app.use(cors({
     origin: keys.frontEnd.URL
 //origin: 'http://localhost:8080'
 }));
-app.use(function(req, res, next) {
-res.setHeader("Content-Security-Policy", default-src 'none'; style-src 'self' data:; img-src 'self' data:; script-src 'self'; connect-src 'self');
-    return next();
-});
+
 //fix deprecation warnings
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
@@ -40,7 +37,7 @@ app.use(cookieSession({
     maxAge: 1000*60*60*24,
     keys: [keys.cookieSession.key]
 }))
-app.use(favicon(__dirname + '/public/favicon.png'));
+app.use(favicon(__dirname + 'favicon.ico'));
 
 app.use(passport.initialize());
 app.use(passport.session());
