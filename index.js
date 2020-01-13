@@ -32,6 +32,12 @@ mongoose.Promise = global.Promise; //mongodb promise is deprecated
 //initialize body-parser (before the route handler!)
 app.use(bodyParser.json());
 
+
+app.use(function(req, res, next) {
+    res.setHeader("Content-Security-Policy", default-src 'none'; style-src 'self' data:; img-src 'self' data:; script-src 'self'; connect-src 'self');
+    return next();
+});
+
 app.use(cookieSession({
     maxAge: 1000*60*60*24,
     keys: [keys.cookieSession.key]
