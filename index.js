@@ -40,7 +40,7 @@ app.use(cookieSession({
     maxAge: 1000*60*60*24,
     keys: [keys.cookieSession.key]
 }))
-app.use(favicon(__dirname + '/favicon.ico'));
+app.use(favicon(__dirname + '/public/favicon.png'));
 
 app.use(passport.initialize());
 app.use(passport.session());
