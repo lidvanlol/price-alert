@@ -18,7 +18,7 @@ app.use(cors({
 //origin: 'http://localhost:8080'
 }));
 app.use(function(req, res, next) {
-    res.setHeader("Content-Security-Policy", "script-src 'self' https://apis.google.com"," default-src 'none'; style-src 'self' data:; img-src 'self' data:; script-src 'self'; connect-src 'self'");
+res.setHeader("Content-Security-Policy", default-src 'none'; style-src 'self' data:; img-src 'self' data:; script-src 'self'; connect-src 'self');
     return next();
 });
 //fix deprecation warnings
