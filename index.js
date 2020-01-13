@@ -31,10 +31,7 @@ mongoose.Promise = global.Promise; //mongodb promise is deprecated
 
 //initialize body-parser (before the route handler!)
 app.use(bodyParser.json());
-app.use(function(req, res, next) {
-    res.setHeader("Content-Security-Policy", "default-src 'none';script-src 'self' https://www.google-analytics.com/analytics.js https://code.jquery.com/jquery-2.2.4.min.js https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js; img-src 'self' https://www.google-analytics.com/r/collect https://www.google-analytics.com/collect https://www.gstatic.com/images/; font-src 'self' https://fonts.gstatic.com https://stackpath.bootstrapcdn.com/bootswatch/3.3.7/fonts/;connect-src 'self' https://www.google-analytics.com; ;style-src 'self' https://stackpath.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css https://fonts.googleapis.com;frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri https://app.getsentry.com/api/61840/csp-report/?sentry_version=5&sentry_key=fa6dfb4b9f18472ea63004645f521c17;");
-    return next();
-});
+
 app.use(cookieSession({
     maxAge: 1000*60*60*24,
     keys: [keys.cookieSession.key]
