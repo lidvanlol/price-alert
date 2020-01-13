@@ -32,7 +32,7 @@ mongoose.Promise = global.Promise; //mongodb promise is deprecated
 //initialize body-parser (before the route handler!)
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
-    res.setHeader("Content-Security-Policy", "script-src 'self' https://apis.google.com");
+    res.setHeader("Content-Security-Policy", "font-src 'self' data:; img-src 'self' data:; default-src 'self' https://price-alert-app-vue.herokuapp.com/");
     return next();
 });
 app.use(cookieSession({
