@@ -4,9 +4,7 @@
   "description": "Price Alert App ",
   "main": "index.js",
   "scripts": {
-   "start": "node index.js",
-  
-   
+   "start": "node index.js"
   },
   "author": "Filip Jovkovic",
   "license": "ISC",
